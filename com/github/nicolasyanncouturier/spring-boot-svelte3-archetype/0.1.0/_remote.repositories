@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sun Sep 19 15:03:14 CEST 2021
+spring-boot-svelte3-archetype-0.1.0.jar>=
+spring-boot-svelte3-archetype-0.1.0.pom>com.github.nicolasyanncouturier.spring-boot-svelte3-archetype=
+spring-boot-svelte3-archetype-0.1.0.jar>com.github.nicolasyanncouturier.spring-boot-svelte3-archetype=
+spring-boot-svelte3-archetype-0.1.0.pom>=
