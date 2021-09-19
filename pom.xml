@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.nicolasyanncouturier</groupId>
     <artifactId>spring-boot-svelte3-archetype</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
 
     <build>
