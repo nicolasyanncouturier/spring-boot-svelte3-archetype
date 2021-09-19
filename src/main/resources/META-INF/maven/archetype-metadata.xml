@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+    name="${artifactId}">
+
+    <fileSets>
+        <fileSet filtered="true" packaged="true">
+            <directory>src/main/kotlin</directory>
+        </fileSet>
+        <fileSet filtered="false" packaged="false">
+            <directory>src/main/js</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/resources</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="true">
+            <directory>src/test/kotlin</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="true">
+            <directory>src/test/groovy</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory />
+            <includes>
+                <include>README.md</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="false" packaged="false">
+            <directory/>
+            <includes>
+                <!-- Adding .gitignore is currently broken: https://issues.apache.org/jira/projects/ARCHETYPE/issues/ARCHETYPE-505 -->
+                <!-- Thus, it will be renamed to .gitignore via META-INF/archetype-post-generate.groovy -->
+                <include>gitignore</include>
+                <include>mvnw</include>
+                <include>mvnw.cmd</include>
+                <include>package.json</include>
+                <include>rollup.config.js</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</archetype-descriptor>
