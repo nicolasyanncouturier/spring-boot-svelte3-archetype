@@ -11,7 +11,7 @@ if ! [[ -e "./com/github/nicolasyanncouturier/spring-boot-svelte3-archetype/" ]]
 fi
 
 mvn versions:set -DnewVersion="$new_version" || exit 2
-mvn clean install || exit 3
+mvn clean install -DcreateChecksum=true || exit 3
 if [[ -e "./com/github/nicolasyanncouturier/spring-boot-svelte3-archetype/maven-metadata-local.xml" ]]; then
   last_updated=$(xmlstarlet sel -t -v "/metadata/versioning/lastUpdated" "$HOME/.m2/repository/com/github/nicolasyanncouturier/spring-boot-svelte3-archetype/maven-metadata-local.xml")
   xmlstarlet ed -P --inplace -u "/metadata/versioning/release" -v "$new_version" "./com/github/nicolasyanncouturier/spring-boot-svelte3-archetype/maven-metadata-local.xml" || exit 4
